@@ -46,7 +46,9 @@ function buttonPressed(button) {
   }
   //add numbers together
   else {
-    current += button;
+    if (!(button === "0" && $("#numbers").text() === "0")){
+      current += button;
+    }
     if(current.length > 9){
       current = current.substring(0, 9);
     }
