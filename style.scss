@@ -1,0 +1,73 @@
+body{
+  background-color: grey;
+}
+
+@font-face{
+  font-family: "digital";
+  src: url(digital-font.ttf);
+}
+
+#numbers{
+  font-size: 4.25em;
+  float: right;
+  display: inline;
+  margin: 3px 10px 3px 10px;
+  font-family: 'digital';
+}
+
+.calculator{
+  background-color: rgb(220, 210, 192);
+  width: 300px;
+  height: 400px;
+  display: block;
+  margin: 50px auto;
+  border-radius: 25px;
+  padding: 10px 25px 25px 25px;
+  box-shadow: 6px 6px 2px 2px rgba(0, 0, 0, .2), inset -2px -4px 10px 2px rgba(0, 0, 0, .8);
+}
+
+.screen{
+  width: 98%;
+  height: 3.5em;
+  background-color: rgb(128, 140, 118);
+  display: block;
+  margin: 20px auto 20px auto;
+  border-radius: 5px;
+  border: solid 3px rgb(170, 170, 170);
+  box-shadow: inset -4px 4px 2px rgba(0, 0, 0, .3);
+}
+
+.button{
+  background-color: rgb(58, 58, 58);
+  color: white;
+  border-radius: 8px;
+  width: 90%;
+  height: 100%;
+  outline: none;
+  justify-self: center;
+  border: none;
+  font-size: 1.5em;
+  box-shadow: 1px 4px 0 0 #212121, inset -1px -3px 8px 2px #515151;
+  cursor: pointer;
+  &:active{
+    transform: translate(0, 3px);
+    box-shadow: none;
+  }
+}
+
+.wrapper{
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  display: grid;
+  grid-gap: 15px;
+  height: 75%;
+}
+
+.zero{
+  grid-column: 1 / 3;
+  width: 95%;
+}
+
+.equals{
+  grid-row: 4 / 6;
+  grid-column: 4 / 5;
+}
